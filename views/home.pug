@@ -1,0 +1,15 @@
+html
+    head   
+        title= title
+    body 
+        form(action="/new_item" method = "post") 
+            div 
+                label(for = "original_name")
+                input(type = "text" name = "original_name" require)
+        ul 
+            each item in list
+                li
+                    h4=item.name 
+                    button(onclick = `changeState("${item.name}")`)
+                        b=item.check       
+    script(src="./js/home.js") 
