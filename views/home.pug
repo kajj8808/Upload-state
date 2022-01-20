@@ -10,6 +10,6 @@ html
             each item in list
                 li
                     h4=item.name 
-                    button(onclick = `changeState("${item.name}")`)
+                    button(onclick = `changeState("${item.name}")` id=item.name)
                         b=item.check       
     script(src="./js/home.js") 
